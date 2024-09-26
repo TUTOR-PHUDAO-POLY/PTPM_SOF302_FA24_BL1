@@ -12,22 +12,27 @@
         <button type="submit">Search</button>
     </form>
     <br/>
+    <a href="/san-pham/view-add">Add</a>
     <form>
-        ID:<input type="text"/>
+        ID:<input type="text" value="${sanPham.id}"/>
         <br/>
-        Ma:<input type="text"/>
+        Ma:<input type="text" value="${sanPham.ma}"/>
         <br/>
-        Ten:<input type="text"/>
+        Ten:<input type="text" value="${sanPham.ten}"/>
         <br/>
-        Gia:<input type="text"/>
+        Gia:<input type="text" value="${sanPham.gia}"/>
         <br/>
         Loai:
         <select>
+            <%-- selected--%>
+            <%-- Ctrl Alt 0 => Xoa import thua
+             Ctrl Alt L : format code--%>
+            <option value="Loai 1" ${sanPham.loai == "Loai 1" ?"selected":""}>Loai 1</option>
+            <option value="Loai 2" ${sanPham.loai == "Loai 2" ?"selected":""} >Loai 2</option>
+            <option value="Loai 3" ${sanPham.loai == "Loai 3" ?"selected":""}>Loai 3</option>
+            <option value="Loai 4" ${sanPham.loai == "Loai 4" ?"selected":""}>Loai 4</option>
         </select>
-        <option>Loai 1</option>
-        <option>Loai 2</option>
-        <option>Loai 3</option>
-        <option>Loai 4</option>
+
         <br/>
         <button type="submit">Add</button>
     </form>
@@ -50,6 +55,11 @@
                 <td>${sp.ten}</td>
                 <td>${sp.gia}</td>
                 <td>${sp.loai}</td>
+                <td>
+                    <a href="/san-pham/delete/${sp.id}">Delete</a>
+                    <a href="/san-pham/detail/${sp.id}">Detail</a>
+                    <a href="/san-pham/view-update/${sp.id}">Update</a>
+                </td>
             </tr>
         </c:forEach>
         </tbody>
