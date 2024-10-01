@@ -22,8 +22,8 @@ public interface LopHocRepository extends JpaRepository<LopHoc, Long> {
     //1.Raw SQL
 //    List<LopHoc>findLopHocsByName1OrDiaDiemLopHoc(String name, String diaDiemLopHoc);
     // 2. JPQL <=> HQL => Truy van tren thuc the
-    @Query("SELECT l FROM LopHoc l WHERE l.name1 LIKE ?1 AND l.diaDiemLopHoc LIKE ?2")
-    List<LopHoc> searchTen(String name, String diaDiemLopHoc);
+//    @Query("SELECT l FROM LopHoc l WHERE l.name1 LIKE ?1 AND l.diaDiemLopHoc LIKE ?2")
+//    List<LopHoc> searchTen(String name, String diaDiemLopHoc);
     // 3. native query => Truy van dua vao cau lenh SQL (*)
 
 }

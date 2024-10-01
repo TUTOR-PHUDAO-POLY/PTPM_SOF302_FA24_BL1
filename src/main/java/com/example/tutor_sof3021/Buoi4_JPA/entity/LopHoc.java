@@ -25,7 +25,7 @@ public class LopHoc {
     private Long id;
 
     @Column (name = "name")
-    private String name1;
+    private String name;
 
     @Column(name = "dia_diem_lop_hoc")
     private String diaDiemLopHoc;
