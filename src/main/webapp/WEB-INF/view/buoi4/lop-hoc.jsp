@@ -15,6 +15,10 @@
     </tr>
     </thead>
     <tbody>
+    <%-- Load du lieu: MSSV, TenSV, Dia CHi, Ma Lop, TenLop --%>
+    <%--  2 bang
+        => Load du lieu bang SV
+       --%>
         <c:forEach items="${listLopHoc}" var="lophoc">
             <tr>
                 <td>${lophoc.id}</td>
